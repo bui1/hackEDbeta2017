@@ -18,14 +18,16 @@
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/aclonica"
+
+
             android:padding="16dp"
             android:text="Hidden Gems"
-
-
             android:textAlignment="center"
             android:textColor="#0033cc"
             android:textSize="36sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,7 +35,7 @@
             android:fontFamily="cursive"
             android:paddingBottom="40dp"
 
-            android:text="Find the most extroadinary places at the places you travel to"
+            android:text="Find the most extroadinary places at the new locations you travel to"
             android:textAlignment="center"
             android:textColor="#0033cc"
             android:textSize="24sp" />

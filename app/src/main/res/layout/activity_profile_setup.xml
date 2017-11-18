@@ -7,19 +7,37 @@
     tools:context="com.example.android.hiddengems.profile_setup">
 
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-        android:fontFamily="@font/aclonica"
-        android:padding="16dp"
-        android:text="Hidden Gems"
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdasdsads"
+
+            android:layout_gravity="center_horizontal" />
 
 
-        android:textAlignment="center"
-        android:textColor="#0033cc"
-        android:textSize="36sp"
-        android:textStyle="bold" />
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="Have profile already? Enter your full name here"
+            android:inputType="text" />
+
+
+
+
+    </LinearLayout>
+
+
 
 
 
