@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">HiddenGems</string>
+    <string name="title_activity_profile_setup">profile_setup</string>
 </resources>
