@@ -34,6 +34,20 @@
 
 
 
+        <Button
+            android:id="@+id/toMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="30dp"
+            android:background="#ea841e"
+            android:onClick="goToMain"
+            android:text="Go to add locations to your profile!"
+            android:textColor="#000000"
+
+            />
+
+
 
     </LinearLayout>
 

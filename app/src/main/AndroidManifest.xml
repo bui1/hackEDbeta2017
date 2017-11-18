@@ -21,7 +21,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".profile_setup"></activity>
+        <activity android:name=".profile_setup" />
+        <activity android:name=".list_screen"></activity>
     </application>
 
 </manifest>
