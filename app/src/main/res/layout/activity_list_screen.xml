@@ -6,4 +6,145 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.hiddengems.list_screen">
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <ImageView
+            android:id="@+id/finalprofilepic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/finalprofilepic"
+            android:layout_marginEnd="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="14dp"
+            android:text="YOUR NAME HERE" />
+
+
+        <TextView
+            android:id="@+id/yourcity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="23dp"
+            android:paddingBottom="16dp"
+            android:text="YOUR CITY HERE" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/finalprofilepic"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/yourlocations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/scrollView2"
+            android:layout_alignStart="@+id/scrollView2"
+            android:layout_below="@+id/yourcity"
+            android:layout_marginTop="11dp"
+            android:paddingBottom="5dp"
+            android:text="Your Hidden Gems in your city"
+            android:textSize="16sp" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="wrap_content"
+
+            android:layout_height="150dp"
+            android:layout_below="@+id/yourlocations"
+            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
+            android:layout_toEndOf="@+id/finalprofilepic"
+            android:layout_toRightOf="@+id/finalprofilepic">
+
+            <TextView
+                android:id="@+id/list_personal_locations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textSize="14sp" />
+
+        </ScrollView>
+
+        <EditText
+            android:id="@+id/new_gem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/scrollView2"
+            android:layout_alignStart="@+id/scrollView2"
+            android:layout_below="@+id/scrollView2"
+            android:hint="Add new hidden gem"
+            android:textSize="18sp"
+            android:background="#f9dca3"
+            />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/new_gem"
+            android:layout_alignStart="@+id/new_gem"
+            android:layout_below="@+id/new_gem"
+            android:text="Will Check out Cities ..."
+            android:textSize="16sp" />
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_below="@+id/textView2">
+
+            <TextView
+                android:id="@+id/wish_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:textSize="14sp" />
+
+
+        </ScrollView>
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/scrollView3"
+            android:layout_alignStart="@+id/scrollView3"
+            android:layout_below="@+id/scrollView3"
+            android:background="#a5dbe6"
+            android:hint="Add new city to visit"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="449dp" />
+    </RelativeLayout>
+
+
+
 </android.support.constraint.ConstraintLayout>
