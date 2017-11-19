@@ -44,8 +44,8 @@ public class list_screen extends AppCompatActivity {
         String messageName = intent.getStringExtra(profile_setup.EXTRA_MESSAGE);
         String messageCity = intent.getStringExtra(profile_setup.EXTRA_MESSAGE2);
         // Capture the layout's TextView and set the string as its text
-        textViewName.setText(messageName);
-        textViewCity.setText(messageCity);
+        textViewName.setText("Name: "+ messageName);
+        textViewCity.setText("City of Residence: "+ messageCity);
 
 
 //        ListView personal_locations = (ListView) findViewById(R.id.list_personal_locations);
@@ -85,6 +85,31 @@ public class list_screen extends AppCompatActivity {
                 editTxt.getText().clear();
                 // next thing you have to do is check if your adapter has changed
                 adapter.notifyDataSetChanged();
+            }
+        });
+
+
+        editTxt2 = (EditText) findViewById(R.id.add_city_view);
+        btn2 = (Button) findViewById(R.id.confirm_city);
+        list2 = (ListView) findViewById(R.id.wish_list);
+        arrayList2 = new ArrayList<String>();
+
+        // Adapter: You need three parameters 'the context, id of the layout (it will be where the data is shown),
+        // and the array that contains the data
+        adapter2 = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_item, arrayList2);
+
+        // Here, you set the data in your ListView
+        list2.setAdapter(adapter2);
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // this line adds the data of your EditText and puts in your array
+                arrayList2.add(editTxt2.getText().toString());
+                editTxt2.getText().clear();
+                // next thing you have to do is check if your adapter has changed
+                adapter2.notifyDataSetChanged();
             }
         });
 

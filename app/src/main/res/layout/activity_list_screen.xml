@@ -141,7 +141,8 @@
             android:layout_height="130dp"
             android:layout_alignLeft="@+id/textView2"
             android:layout_alignStart="@+id/textView2"
-            android:layout_below="@+id/textView2">
+            android:layout_below="@+id/textView2"
+            android:fillViewport="true">
 
             <ListView
                 android:id="@+id/wish_list"
