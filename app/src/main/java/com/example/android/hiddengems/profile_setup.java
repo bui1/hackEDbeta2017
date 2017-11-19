@@ -82,7 +82,6 @@ public class profile_setup extends AppCompatActivity {
 
 
     public void goToMain(View v){
-        Button toMenuOption = (Button) findViewById(R.id.toMain);
 
         Intent intent = new Intent(this, list_screen.class);
         EditText editName = (EditText) findViewById(R.id.fullName);
@@ -92,9 +91,6 @@ public class profile_setup extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, messageName);
         intent.putExtra(EXTRA_MESSAGE2, messageCity);
         startActivity(intent);
-
-
-
 
 
 
