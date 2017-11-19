@@ -6,54 +6,75 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.hiddengems.MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
 
-        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="384dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
-            android:fontFamily="@font/aclonica"
+            android:layout_gravity="center_vertical|center_horizontal|center"
 
 
-            android:padding="16dp"
+            android:fontFamily="serif"
+            android:gravity="center"
             android:text="Hidden Gems"
             android:textAlignment="center"
             android:textColor="#0033cc"
+
             android:textSize="36sp"
             android:textStyle="bold"
+            tools:layout_editor_absoluteX="71dp"
+            tools:layout_editor_absoluteY="16dp" />
 
-            />
+        <ImageView
+            android:id="@+id/splashscreen"
+            android:layout_width="match_parent"
+            android:layout_height="231dp"
+
+            android:layout_gravity="center_vertical|center_horizontal|center"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gemm"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="0dp" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal|center"
+
             android:fontFamily="cursive"
             android:paddingBottom="40dp"
-
+            android:paddingHorizontal="35dp"
             android:text="Find the most extroadinary places at the new locations you travel to"
             android:textAlignment="center"
             android:textColor="#0033cc"
-            android:textSize="24sp" />
-
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="316dp" />
 
         <Button
             android:id="@+id/started"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginBottom="30dp"
-            android:background="#ea841e"
+            android:layout_gravity="center_vertical|center_horizontal|center"
+            android:layout_marginTop="20dp"
+
+            android:background="#ffac59"
             android:onClick="buttonOnClick"
+            android:paddingHorizontal="20dp"
             android:text="Let's Get Started!"
             android:textColor="#000000"
-
-            />
-
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            tools:layout_editor_absoluteX="125dp" />
 
     </LinearLayout>
 
