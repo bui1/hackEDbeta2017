@@ -18,12 +18,26 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class profile_setup extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE = "com.example.hiddengems.MESSAGE";
+    public static final String EXTRA_MESSAGE2 = "com.example.hiddengems.MESSAGE2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_setup);
 
+
+        Button toMenuOption = (Button) findViewById(R.id.toMain);
+    }
+
+
+    public void sendMessage(View view) {
+        Intent intent = new Intent(this, list_screen.class);
+        EditText editName = (EditText) findViewById(R.id.fullName);
+        //EditText editCity = (EditText) findViewById(R.id.cityInput);
+        String messageName = editName.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, messageName);
+        startActivity(intent);
     }
 
     public void onClick(View v){
@@ -35,16 +49,16 @@ public class profile_setup extends AppCompatActivity {
         startActivityForResult(Intent.createChooser(intent, "Select Picture"), 1);
     }
 
-    public void sendMessage(View v) {
-        Intent intent = new Intent(this, list_screen.class);
-        EditText editName = (EditText) findViewById(R.id.fullName);
-        EditText editCity = (EditText) findViewById(R.id.cityInput);
-        String messageName = editName.getText().toString();
-        String messageCity = editCity.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, messageName);
-        intent.putExtra(EXTRA_MESSAGE, messageCity);
-        startActivity(intent);
-    }
+//    public void sendMessage(View v) {
+//        Intent intent = new Intent(this, list_screen.class);
+//        EditText editName = (EditText) findViewById(R.id.fullName);
+//        //EditText editCity = (EditText) findViewById(R.id.cityInput);
+//        String messageName = editName.getText().toString();
+//        //String messageCity = editCity.getText().toString();
+//        intent.putExtra(EXTRA_MESSAGE, messageName);
+//        //intent.putExtra(EXTRA_MESSAGE, messageCity);
+//        startActivity(intent);
+//    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -69,7 +83,22 @@ public class profile_setup extends AppCompatActivity {
 
     public void goToMain(View v){
         Button toMenuOption = (Button) findViewById(R.id.toMain);
-        startActivity(new Intent(getApplicationContext(), list_screen.class));
+
+        Intent intent = new Intent(this, list_screen.class);
+        EditText editName = (EditText) findViewById(R.id.fullName);
+        EditText editCity = (EditText) findViewById(R.id.cityInput);
+        String messageName = editName.getText().toString();
+        String messageCity = editCity.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, messageName);
+        intent.putExtra(EXTRA_MESSAGE2, messageCity);
+        startActivity(intent);
+
+
+
+
+
+
+        //startActivity(new Intent(getApplicationContext(), list_screen.class));
     }
 
 

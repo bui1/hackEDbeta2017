@@ -10,46 +10,57 @@
     <RelativeLayout
         android:id="@+id/profile_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="512dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageView
-            android:id="@+id/finalprofilepic"
+            android:id="@+id/profileP2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/yourCity"
+            android:layout_toLeftOf="@+id/yourName"
+            android:layout_toStartOf="@+id/yourName"
+            app:srcCompat="@drawable/profpic2"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="0dp" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/yourName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/finalprofilepic"
-            android:layout_marginEnd="18dp"
-            android:layout_marginRight="18dp"
-            android:layout_marginTop="14dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
             android:text="YOUR NAME HERE" />
 
 
         <TextView
-            android:id="@+id/yourcity"
+            android:id="@+id/yourCity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_alignLeft="@+id/textView"
-            android:layout_alignStart="@+id/textView"
-            android:layout_below="@+id/textView"
-            android:layout_marginTop="23dp"
+            android:layout_below="@+id/yourName"
+            android:layout_toEndOf="@+id/profileP2"
+            android:layout_toRightOf="@+id/profileP2"
             android:paddingBottom="16dp"
             android:text="YOUR CITY HERE" />
 
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@id/finalprofilepic"
+            android:layout_alignEnd="@+id/yourlocations"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/yourlocations"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
             android:orientation="vertical">
 
 
@@ -61,8 +72,8 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/scrollView2"
             android:layout_alignStart="@+id/scrollView2"
-            android:layout_below="@+id/yourcity"
-            android:layout_marginTop="11dp"
+            android:layout_below="@+id/yourCity"
+            android:layout_marginTop="22dp"
             android:paddingBottom="5dp"
             android:text="Your Hidden Gems in your city"
             android:textSize="16sp" />
@@ -71,7 +82,7 @@
             android:id="@+id/scrollView2"
             android:layout_width="match_parent"
 
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             android:layout_below="@+id/yourlocations"
             android:layout_marginLeft="17dp"
             android:layout_marginStart="17dp"
@@ -81,11 +92,12 @@
             <ListView
                 android:id="@+id/list_personal_locations"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:paddingBottom="16dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                />
 
         </ScrollView>
 
@@ -96,20 +108,20 @@
             android:layout_alignLeft="@+id/scrollView2"
             android:layout_alignStart="@+id/scrollView2"
             android:layout_below="@+id/scrollView2"
-            android:hint="Add new hidden gem"
-            android:textSize="18sp"
             android:background="#f9dca3"
-            />
+            android:hint="Add new hidden gem"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/enter_gem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/new_gem"
-            android:layout_alignLeft="@+id/new_gem"
-            android:layout_alignRight = "@+id/new_gem"
-            android:text="Confirm Spot"
-            />
+
+            android:layout_alignBaseline="@+id/new_gem"
+            android:layout_alignBottom="@+id/new_gem"
+            android:layout_toEndOf="@+id/yourlocations"
+            android:layout_toRightOf="@+id/yourlocations"
+            android:text="Confirm Spot" />
 
 
         <TextView
@@ -118,14 +130,15 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/new_gem"
             android:layout_alignStart="@+id/new_gem"
-            android:layout_below="@+id/new_gem"
+            android:layout_below="@+id/enter_gem"
+            android:layout_marginTop="23dp"
             android:text="Will Check out Cities ..."
             android:textSize="16sp" />
 
         <ScrollView
             android:id="@+id/scrollView3"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             android:layout_alignLeft="@+id/textView2"
             android:layout_alignStart="@+id/textView2"
             android:layout_below="@+id/textView2">
@@ -133,7 +146,10 @@
             <ListView
                 android:id="@+id/wish_list"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_alignStart="@+id/textView2"
+                android:layout_below="@+id/textView2"
                 android:paddingBottom="16dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -147,8 +163,8 @@
             android:id="@+id/add_city_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/scrollView3"
-            android:layout_alignStart="@+id/scrollView3"
+            android:layout_alignEnd="@+id/textView2"
+            android:layout_alignRight="@+id/textView2"
             android:layout_below="@+id/scrollView3"
             android:background="#a5dbe6"
             android:hint="Add new city to visit"
@@ -156,17 +172,23 @@
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="449dp" />
 
-
         <Button
             android:id="@+id/confirm_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@id/add_city_view"
+
+            android:layout_alignBaseline="@+id/add_city_view"
+            android:layout_alignBottom="@+id/add_city_view"
+            android:layout_alignEnd="@+id/enter_gem"
+            android:layout_alignLeft="@+id/enter_gem"
+            android:layout_alignRight="@+id/enter_gem"
+            android:layout_alignStart="@+id/enter_gem"
             android:text="Confirm City"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="463dp" />
 
-            />
+
     </RelativeLayout>
-
 
 
 </android.support.constraint.ConstraintLayout>

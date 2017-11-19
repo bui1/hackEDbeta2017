@@ -35,6 +35,19 @@ public class list_screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_screen);
 
+        // Get the Intent that started this activity and extract the string
+        //Intent intent = getIntent();
+        Bundle extras = getIntent().getExtras();
+        //String messageName = intent.getStringExtra(profile_setup.EXTRA_MESSAGE);
+        //String messageCity = intent.getStringExtra(profile_setup.EXTRA_MESSAGE2);
+        String player1name = extras.getString("EXTRA_MESSAGE");
+        //String player2name = extras.getString("EXTRA_MESSAGE2");
+        // Capture the layout's TextView and set the string as its text
+        TextView textViewName = findViewById(R.id.yourName);
+        textViewName.setText(player1name);
+        TextView textViewCity = findViewById(R.id.yourCity);
+        //textViewCity.setText(player2name);
+
 
 //        ListView personal_locations = (ListView) findViewById(R.id.list_personal_locations);
 //
