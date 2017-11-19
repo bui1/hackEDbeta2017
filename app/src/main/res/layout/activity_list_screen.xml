@@ -8,6 +8,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/profile_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
@@ -68,7 +69,7 @@
 
         <ScrollView
             android:id="@+id/scrollView2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
 
             android:layout_height="150dp"
             android:layout_below="@+id/yourlocations"
@@ -77,10 +78,10 @@
             android:layout_toEndOf="@+id/finalprofilepic"
             android:layout_toRightOf="@+id/finalprofilepic">
 
-            <TextView
+            <ListView
                 android:id="@+id/list_personal_locations"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="150dp"
                 android:paddingBottom="16dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -100,6 +101,16 @@
             android:background="#f9dca3"
             />
 
+        <Button
+            android:id="@+id/enter_gem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/new_gem"
+            android:layout_alignLeft="@+id/new_gem"
+            android:layout_alignRight = "@+id/new_gem"
+            android:text="Confirm Spot"
+            />
+
 
         <TextView
             android:id="@+id/textView2"
@@ -113,16 +124,16 @@
 
         <ScrollView
             android:id="@+id/scrollView3"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_alignLeft="@+id/textView2"
             android:layout_alignStart="@+id/textView2"
             android:layout_below="@+id/textView2">
 
-            <TextView
+            <ListView
                 android:id="@+id/wish_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
                 android:paddingBottom="16dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -133,6 +144,7 @@
 
 
         <EditText
+            android:id="@+id/add_city_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/scrollView3"
@@ -143,6 +155,16 @@
             android:textSize="18sp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="449dp" />
+
+
+        <Button
+            android:id="@+id/confirm_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/add_city_view"
+            android:text="Confirm City"
+
+            />
     </RelativeLayout>
 
 

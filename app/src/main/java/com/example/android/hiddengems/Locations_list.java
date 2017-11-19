@@ -1,5 +1,7 @@
 package com.example.android.hiddengems;
 
+import java.util.List;
+
 /**
  * Created by MonicaB on 2017-11-18.
  */
@@ -7,6 +9,8 @@ package com.example.android.hiddengems;
 public class Locations_list {
 
     public static String[] getLocations() {
+
+
         return new String[] {
                 "West Edm Mall",
                 "Startup Edmonton",
